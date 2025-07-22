@@ -16,6 +16,7 @@ import java.lang.reflect.Method;
 @RequiredArgsConstructor
 public class ExceptionAspect {
 
+
     @AfterThrowing(pointcut = "@annotation(org.example.aop.exception.Exception)", throwing = "ex")
     public void logException(JoinPoint joinPoint, Throwable ex) {
         //methoda ait parametreleri bir object listesinde tutuyoruz
